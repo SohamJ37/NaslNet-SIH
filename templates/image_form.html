@@ -1,0 +1,14 @@
+<!-- templates/upload.html -->
+<!doctype html>
+<title>Upload a file</title>
+<h1>Upload</h1>
+<form method="post" action="{{ url_for('index') }}" enctype="multipart/form-data">
+  {% for i in range(3): %}
+    <input type="file" name="files" accept=".png,.jpg,.jpeg,.gif,.pdf" required>
+    <br>
+  {% endfor %}
+  <button type="submit">Upload</button>
+</form>
+{% with messages = get_flashed_messages() %}
+  {% for m in messages %}<p>{{ m }}</p>{% endfor %}
+{% endwith %}

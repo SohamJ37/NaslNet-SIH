@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section accent-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="static/assets/img/Carousel1.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to नस्लNet</h2>
+            <p>Revolutionary NasalNet AI identifies cattle breeds from images and predicts milk production - transforming modern dairy farming beyond traditional apps</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-camera icon"></i></div>
+              <h4><a class="stretched-link">Image Recognition</a></h4>
+              <p>Advanced AI identifies cattle breeds instantly from images with 99.2% accuracy.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-graph-up icon"></i></div>
+              <h4><a class="stretched-link">Milk Production Prediction</a></h4>
+              <p>Predict Milk yield potential based on breed characteristicks and individual cattle traits</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-lightning icon"></i></div>
+              <h4><a class="stretched-link">Lightning Fast</a></h4>
+              <p>Get results in under 3 seconds - significantly faster than manual breed identification</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-shield icon"></i></div>
+              <h4><a class="stretched-link">Superior to BPA Apps</a></h4>
+              <p>Our AI surpasses traditional breeding apps with higher accuracy adn more comprehensive data</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+</main>
+
+{% include "footer.html" %}
+</html>

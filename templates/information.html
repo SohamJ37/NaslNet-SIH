@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+
+<main class="main">
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>{{breed_name.replace('_', ' ')}}</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="{{ url_for('static', filename='assets/img/Breeds/' + breed_name + '.jpg') }}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>The {{ breed_name.replace('_', ' ') }} Breed originates from {{ data_dict['origin'] }}.</h3>
+            <p class="fst-italic">
+              Here are the key characteristics-
+            </p>
+            <ul>
+              <li><i class="bi bi-dot"></i> <span>Milk yield: {{ data_dict['milk_yield_liters_per_day'] }} litres per day</span></li>
+              <li><i class="bi bi-dot"></i> <span>Milk fat percentage: {{ data_dict['milk_fat_percentage'].split('–')[0].replace('.0', '') }}%-{{ data_dict['milk_fat_percentage'].split('–')[1].replace('.0', '') }}%</span></li>
+              <li><i class="bi bi-dot"></i> <span>Lifespan: {{ data_dict['lifespan_years'] }} years</span></li>
+              <li><i class="bi bi-dot"></i> <span>Average Weight: Male- {{ data_dict['average_weight_male_kg'] }}kg, Female- {{ data_dict['average_weight_female_kg'] }}kg</span></li>
+              <li><i class="bi bi-dot"></i> <span>Temprament- {{ data_dict['temperament'] }}</span></li>
+
+            </ul>
+            <p>
+              
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% include "footer.html" %}
+</html>
