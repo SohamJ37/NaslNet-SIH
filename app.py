@@ -8,8 +8,9 @@ import torch
 import os
 from data import breed_data
 
-from main import SimpleClassifier, predict_image, device, predict_multiple, class_names
+from main import SimpleClassifier, predict_image, device
 
+class_names = sorted(list(breed_data["breeds"].keys()))
 model = SimpleClassifier(num_classes=41)
 model.load_state_dict(torch.load("breed.pth", map_location=device))
 model.to(device)
